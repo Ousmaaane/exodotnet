@@ -237,4 +237,4 @@ Limite : les messages de validation et le message « panier vide » ont aussi le
 
 ### c) Google Classroom
 
-Je dépose moi-même le lien du dépôt sur Google Classroom : https://github.com/Ousmaaane/exodotnet
+Le lien du dépôt est déposé sur Google Classroom : https://github.com/Ousmaaane/exodotnet
