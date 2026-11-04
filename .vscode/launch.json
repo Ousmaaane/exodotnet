@@ -1,0 +1,32 @@
+{
+  // Configuration de débogage VS Code pour la Boutique Diayma (extension C# requise).
+  // NB : VS Code ne permet PAS de déclarer des points d'arrêt dans launch.json.
+  // Poser les 5 points d'arrêt avec F9 (voir README, tâche 7) :
+  //   Components/CartSummaryViewComponent.cs:12, Controllers/ProductController.cs:15,
+  //   Controllers/OrderController.cs:17, Controllers/CartController.cs:15, Startup.cs:20
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Diayma (Debug)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/P2FixAnAppDotNetCode/bin/Debug/netcoreapp2.0/Diayma.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/P2FixAnAppDotNetCode",
+      "stopAtEntry": false,
+      "justMyCode": true,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "Now listening on:\s+(https?://\S+)"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:62929",
+        // Le projet cible netcoreapp2.0 : sans runtime 2.0 installé,
+        // on autorise l'exécution sur le runtime le plus récent (.NET 10).
+        "DOTNET_ROLL_FORWARD": "Major"
+      }
+    }
+  ]
+}
